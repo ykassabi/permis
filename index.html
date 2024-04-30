@@ -1,0 +1,300 @@
+<!--<!doctype html>-->
+<!--<html class="no-js" lang="">-->
+
+<!--<head>-->
+<!--  <meta charset="utf-8">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--  <title></title>-->
+<!--  <link rel="stylesheet" href="css/style.css">-->
+<!--  <meta name="description" content="">-->
+
+<!--  <meta property="og:title" content="">-->
+<!--  <meta property="og:type" content="">-->
+<!--  <meta property="og:url" content="">-->
+<!--  <meta property="og:image" content="">-->
+<!--  <meta property="og:image:alt" content="">-->
+
+<!--  <link rel="icon" href="/favicon.ico" sizes="any">-->
+<!--  <link rel="icon" href="/icon.svg" type="image/svg+xml">-->
+<!--  <link rel="apple-touch-icon" href="icon.png">-->
+
+<!--  <link rel="manifest" href="site.webmanifest">-->
+<!--  <meta name="theme-color" content="#fafafa">-->
+<!--</head>-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculateur des phases de permis de conduire au Québec</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+<!-- Navigation Bar -->
+<nav class="bg-white shadow-lg">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between">
+      <div class="flex space-x-7">
+        <div>
+          <!-- Website Logo -->
+          <a href="#" class="flex items-center py-4 px-2">
+            <img src="https://123c.ca/wp-content/uploads/2024/04/1-cv.svg" alt="Logo" class="h-8 w-8 mr-2">
+            <span class="font-semibold text-gray-500 text-lg">Calculateur des phases</span>
+          </a>
+        </div>
+        <!-- Primary Navbar items -->
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold ">Phase 1</a>
+          <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Phase 2</a>
+          <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Phase 3</a>
+          <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Phase 4</a>
+        </div>
+      </div>
+      <!-- Slogan -->
+      <div class="hidden md:flex items-center space-x-3 ">
+        <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Votre Partenaire de Route!</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+<div class="container mx-auto px-4 py-10">
+  <h1 class="text-3xl font-bold text-center mb-10">Calculateur des phases de permis de conduire au Québec</h1>
+
+
+  <h2 class="text-3xl font-bold text-center mb-10">Programme d'Éducation à la Sécurité Routière (PESR)</h2>
+
+  <!-- Phases -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- Phase 1 -->
+    <div class="bg-yellow-400 p-4 rounded-lg shadow">
+      <h2 class="font-bold mb-3">Phase 1</h2>
+      <ul>
+        <li>1. Le véhicule</li>
+        <li>2. Le conducteur</li>
+        <li>3. L'environnement</li>
+        <li>4. Comportements à risque</li>
+        <li>5. Évaluation</li>
+      </ul>
+      <!-- Phase 1 -->
+      <div class="phase bg-yellow-300 p-6 rounded-lg shadow-md mb-6">
+        <h2 class="font-bold mb-4">Phase 1 (Durée minimale de 28 jours)</h2>
+        <input type="date" id="phase1-start" onchange="calculateDates()"
+               class="date-input w-full p-2 text-lg border-2 border-gray-300 rounded-lg focus:border-yellow-500">
+        <p>Date de fin: <span id="phase1-end" class="font-medium"></span></p>
+      </div>
+    </div>
+    <!-- Phase 2 -->
+    <div class="bg-orange-400 p-4 rounded-lg shadow">
+      <h2 class="font-bold mb-3">Phase 2</h2>
+      <ul>
+        <li>6. Conduite accompagnée</li>
+        <li>Sortie 1</li>
+        <li>Sortie 2</li>
+        <li>7. Stratégie OEA</li>
+        <li>Sortie 3</li>
+        <li>Sortie 4</li>
+      </ul>
+      <!-- Phase 2 -->
+      <div class="phase bg-orange-300 p-6 rounded-lg shadow-md mb-6">
+        <h2 class="font-bold mb-4">Phase 2 (Durée minimale de 28 jours)</h2>
+        <input type="date" id="phase2-start" onchange="calculateDates()"
+               class="date-input w-full p-2 text-lg border-2 border-gray-300 rounded-lg focus:border-orange-500">
+        <p>Date de fin: <span id="phase2-end" class="font-medium"></span></p>
+      </div>
+    </div>
+
+    <!-- Phase 3 -->
+    <div class="bg-green-400 p-4 rounded-lg shadow">
+      <h2 class="font-bold mb-3">Phase 3</h2>
+      <ul>
+        <li>8. Vitesse</li>
+        <li>Sortie 5</li>
+        <li>Sortie 6</li>
+        <li>9. Partage de la route</li>
+        <li>Sortie 7</li>
+        <li>Sortie 8</li>
+      </ul>
+      <!-- Phase 3 -->
+      <div class="phase bg-green-300 p-6 rounded-lg shadow-md mb-6">
+        <h2 class="font-bold mb-4">Phase 3 (Durée minimale de 56 jours)</h2>
+        <input type="date" id="phase3-start" onchange="calculateDates()"
+               class="date-input w-full p-2 text-lg border-2 border-gray-300 rounded-lg focus:border-green-500">
+        <p>Date de fin: <span id="phase3-end" class="font-medium"></span></p>
+      </div>
+    </div>
+
+    <!-- Phase 4 -->
+    <div class="bg-blue-400 p-4 rounded-lg shadow">
+      <h2 class="font-bold mb-3">Phase 4</h2>
+      <ul>
+        <li>11. Fatigue, distractions</li>
+        <li>Sortie 11</li>
+        <li>Sortie 12</li>
+        <li>12. Écoconduite</li>
+        <li>Sortie 13</li>
+        <li>Sortie 14</li>
+        <li>Sortie 15 - Synthèse</li>
+      </ul>
+      <!-- Phase 4 -->
+      <div class="phase bg-blue-300 p-6 rounded-lg shadow-md mb-6">
+        <h2 class="font-bold mb-4">Phase 4 (Durée minimale de 56 jours)</h2>
+        <input type="date" id="phase4-start" onchange="calculateDates()"
+               class="date-input w-full p-2 text-lg border-2 border-gray-300 rounded-lg focus:border-blue-500">
+        <p>Date de fin: <span id="phase4-end" class="font-medium"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skills to Acquire -->
+  <div class="mt-6 bg-green-200 p-4 rounded-lg shadow">
+    <h3 class="font-bold">4 compétences à acquérir</h3>
+    <ol class="list-decimal pl-5">
+      <li>Établir le profil d'un conducteur au comportement sécuritaire, coopératif et responsable</li>
+      <li>Manœuvrer un véhicule de promenade</li>
+      <li>Partager la route</li>
+      <li>Utiliser le réseau routier de façon autonome et responsable</li>
+    </ol>
+  </div>
+
+
+
+
+
+
+
+
+  <!-- Theoretical and Practical Exam -->
+  <div class="exam bg-red-300 p-6 rounded-lg shadow-md">
+    <h2 class="font-bold mb-4">Dates des examens (à partir de la date de début du permis apprenti)</h2>
+    <input type="date" id="permis-apprenti-start" onchange="calculateExams()"
+           class="date-input w-full p-2 text-lg border-2 border-gray-300 rounded-lg focus:border-red-500">
+    <p>Date de l'examen théorique: <span id="theoretical-exam" class="font-medium"></span></p>
+    <p>Date de l'examen pratique: <span id="practical-exam" class="font-medium"></span></p>
+  </div>
+</div>
+
+
+<div class="container mx-auto px-4 py-10">
+  <header class="mb-10">
+    <h1 class="text-3xl font-bold text-center mb-4">Bienvenue sur le Calculateur des Phases du Permis de Conduire du
+      Québec</h1>
+    <p class="text-xl text-gray-700 text-center">
+      Planifiez votre parcours d'apprentissage de la conduite avec précision et confiance grâce à notre outil
+      dédié aux futurs conducteurs du Québec.
+    </p>
+  </header>
+
+  <section class="mb-10">
+    <h2 class="text-2xl font-bold mb-3">Qu'est-ce que le PESR?</h2>
+    <p class="text-lg text-gray-700">
+      Le Programme d'éducation à la sécurité routière (PESR) est essentiel pour tous les conducteurs aspirants au
+      Québec. Il s'agit d'un parcours structuré qui comprend des étapes et des phases conçues pour améliorer les
+      compétences et la sécurité des conducteurs novices. Notre calculateur vous aide à naviguer dans ce processus
+      en déterminant les dates clés pour chaque phase de votre permis.
+    </p>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-2xl font-bold mb-3">Le Permis d'Apprenti</h2>
+    <p class="text-lg text-gray-700">
+      Le permis d'apprenti est la première étape pour devenir un conducteur licencié au Québec. Il permet aux
+      nouveaux conducteurs de pratiquer la conduite sous supervision, assurant ainsi une expérience pratique
+      sécurisée. Avec notre calculateur, déterminez quand vous pourrez passer à l'étape suivante en respectant les
+      périodes obligatoires.
+    </p>
+  </section>
+
+  <section>
+    <h2 class="text-2xl font-bold mb-3">Le Permis Probatoire</h2>
+    <p class="text-lg text-gray-700 mb-10">
+      Après avoir réussi l'examen théorique et ayant complété la durée requise avec le permis d'apprenti, vous
+      avancerez au permis probatoire. Cette licence intermédiaire permet plus d'indépendance tout en promouvant la
+      sécurité et l'apprentissage continu sur la route. Utilisez notre calculateur pour planifier efficacement
+      votre transition vers une licence complète.
+    </p>
+  </section>
+
+  <!-- Include your calculator and phases here -->
+</div>
+
+
+
+<!-- Footer with logo -->
+<footer class="text-center mt-6">
+  <a href="https://123c.ca">made by 123C - Services web Gratuits pour les Canadians
+    <img src="https://123c.ca/wp-content/uploads/2024/04/1-cv.svg" alt="Logo 123c " class="mx-auto h-8 w-8">
+  </a>
+</footer>
+
+
+<script>
+  function calculateDates() {
+    // Phase 1
+    const phase1Start = document.getElementById('phase1-start').value;
+    if (phase1Start) {
+      const phase1End = addDays(phase1Start, 28);
+      document.getElementById('phase1-end').textContent = formatDate(phase1End);
+    }
+
+    // Phase 2
+    const phase2Start = document.getElementById('phase2-start').value;
+    if (phase2Start) {
+      const phase2End = addDays(phase2Start, 28);
+      document.getElementById('phase2-end').textContent = formatDate(phase2End);
+    }
+
+    // Phase 3
+    const phase3Start = document.getElementById('phase3-start').value;
+    if (phase3Start) {
+      const phase3End = addDays(phase3Start, 56);
+      document.getElementById('phase3-end').textContent = formatDate(phase3End);
+    }
+
+    // Phase 4
+    const phase4Start = document.getElementById('phase4-start').value;
+    if (phase4Start) {
+      const phase4End = addDays(phase4Start, 56);
+      document.getElementById('phase4-end').textContent = formatDate(phase4End);
+    }
+  }
+
+  function calculateExams() {
+    const apprentiStart = document.getElementById('permis-apprenti-start').value;
+    if (apprentiStart) {
+      const theoreticalExam = addMonths(apprentiStart, 10);
+      document.getElementById('theoretical-exam').textContent = formatDate(theoreticalExam);
+
+      const practicalExam = addMonths(apprentiStart, 12);
+      document.getElementById('practical-exam').textContent = formatDate(practicalExam);
+    }
+  }
+
+  function addDays(dateString, days) {
+    const date = new Date(dateString);
+    date.setDate(date.getDate() + days);
+    return date;
+  }
+
+  function addMonths(dateString, months) {
+    const date = new Date(dateString);
+    date.setMonth(date.getMonth() + months);
+    return date;
+  }
+
+  function formatDate(date) {
+    return date.toLocaleDateString('fr-CA', {
+      year: 'numeric', month: '2-digit', day: '2-digit'
+    });
+  }
+</script>
+
+</body>
+</html>
